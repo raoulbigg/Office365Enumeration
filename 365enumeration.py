@@ -23,7 +23,7 @@ def check_api():
     for email in emails:
         r = requests.get("https://outlook.office365.com/autodiscover/autodiscover.json/v1.0/{}?Protocol=rest".format(email.strip()), headers=headers, verify=False, allow_redirects=False, proxies=False)
         if r.status_code == 200:
-            valid_emails.append(email)
+            valid_emails.append(email.strip())
         else:
             pass
 
@@ -38,7 +38,7 @@ if __name__ == '__main__':
         for line in emailFile:
             emails.append(line)
     check_api()
-    for v_email in valid_emails:
-        print("Existing Office365 email: " + v_email)
+    print("Existing Office365 emails: \n")
+    print(*valid_emails, sep="\n")
 
             
