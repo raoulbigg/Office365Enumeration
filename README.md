@@ -1,6 +1,5 @@
 # Office365Enumeration  
-This script checks if an email address is valid in **Office365**.  
-This script does not perform any login attempt.  
+This script checks if an email address is valid in **Office365** without making any login attempts.  
 It is extremely handy to use for social engineering assesments to check for valid Office365 email address'.  
 
 The script makes use of the **Microsoft AutoDiscovery API**.  
