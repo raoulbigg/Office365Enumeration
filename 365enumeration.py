@@ -28,10 +28,6 @@ def check_api():
             pass
 
 if __name__ == '__main__':
-    print("-----------------------------------------------------------")
-    print("             Office365 email enumeration script by:        ")
-    print("             Raoulbigg                                     ")
-    print("-----------------------------------------------------------")
     requests.packages.urllib3.disable_warnings()
     args = parse_args()
     with args.file as emailFile:
